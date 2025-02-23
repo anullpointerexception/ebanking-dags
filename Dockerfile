@@ -1,4 +1,4 @@
 FROM alpine:latest
-WORKDIR /dags
-COPY dags/ /source_dags/
+WORKDIR /dag_source
+COPY dags/ /dag_source/
 CMD ["sleep", "infinity"]
