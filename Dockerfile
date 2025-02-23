@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM alpine:latest
 WORKDIR /dags
-COPY . /dags
-CMD ["tail", "-f", "/dev/null"]
+COPY . /dags  # ✅ Ensure DAGs are copied into the image
+CMD ["sleep", "infinity"]  # Keeps the container running
